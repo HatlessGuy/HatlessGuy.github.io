@@ -371,6 +371,47 @@ nav a:hover {
     color: var(--gold); 
 }
 
+/*the approach on NDIS - similar styling to story but with image */
+
+.approach {
+    background: var(--ink);
+    color: var(--ink-foreground);
+}
+
+.approach-image-wrap {
+    min-height: 36rem;
+    overflow: hidden;
+}
+
+.approach-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.approach-section { 
+    display: grid; 
+    grid-template-columns: 1.07fr 0.93fr; 
+    min-height: 44rem; 
+    background: var(--ink); 
+    color: var(--ink-foreground); 
+}
+
+.approach-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.approach-text h1 {
+    font-size: 3.5rem;
+}
+
+.approach-text p {
+    padding-bottom: 1.5rem;
+}
 /*the court of public opinion */
 
 .reviews-title {
