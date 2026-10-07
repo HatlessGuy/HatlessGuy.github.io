@@ -1,0 +1,507 @@
+:root {
+  --background: oklch(0.975 0.01 75);
+  --foreground: oklch(0.24 0.03 30);
+  --card: oklch(0.99 0.006 75);
+  --primary: oklch(0.38 0.09 25);
+  --primary-foreground: oklch(0.97 0.01 75);
+  --secondary: oklch(0.93 0.02 70);
+  --muted-foreground: oklch(0.5 0.03 40);
+  --accent-foreground: oklch(0.24 0.03 30);
+  --border: oklch(0.88 0.02 65);
+  --ink: oklch(0.2 0.03 30);
+  --ink-foreground: oklch(0.95 0.015 75);
+  --gold: oklch(0.75 0.11 75);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    border-color: var(--border); 
+}
+
+html { 
+    scroll-behavior: smooth;
+ }
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+}
+
+.golden {
+    color: var(--gold);
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.muted {
+    color: var(--muted-foreground);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.75rem;
+}
+
+/* i like big buttons and I cannot lie */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 2px;
+    padding: 0.87rem 1.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--accent-foreground);
+}
+
+.btn-prime {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.btn-outline {
+    border: 1px solid color-mix(in srgb, var(--ink-foreground) 40%, transparent);
+    color: var(--ink-foreground);
+}
+
+.btn-outline:hover {
+    background: color-mix(in srgb, var(--ink-foreground) 10%, transparent);
+}
+
+.btn-small {
+    padding: 0.62rem 1.25rem;
+    font-size: 0.87rem;
+}
+
+/* code for header shizz */
+
+.site-header {
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 20;
+}
+
+.header-inside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 0.05rem;
+    color: var(--ink-foreground);
+}
+
+.brandname {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.nav {
+    gap: 2rem;
+    font-size: 0.87rem;
+    display: none;
+}
+
+.nav a {
+    color: inherit;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+}
+
+
+/* I need a hero section */
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 92vh;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--ink);
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--ink), color-mix(in srgb, var(--ink) 40%, transparent), transparent);
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5rem;
+    color: var(--ink-foreground);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 500;
+    max-width: 48rem;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+}
+
+.hero-sub {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 36rem;
+}
+
+.hero-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* the statistics */
+
+.stats { 
+    border-bottom: 1px solid var(--border); 
+    background: var(--secondary); 
+}
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) { 
+    .stats-grid { 
+        grid-template-columns: repeat(4, 1fr);
+     } 
+    }
+
+.stat-number { 
+    font-family: var(--font-display); 
+    font-size: 1.87rem; 
+    color: var(--primary); 
+}
+
+.stat-label { 
+    font-size: 0.87rem; 
+    color: var(--muted-foreground); 
+}
+
+/* sections section */
+
+.section {
+    padding: 6rem 0;
+}
+
+.section-intro {
+    max-width: 42rem;
+    margin-bottom: 3.5rem;
+}
+
+.section-intro h2 {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+    .section-intro h2 {
+        font-size: 3rem;
+    }
+}
+
+.section-intro .muted {
+    margin-top: 1rem;
+}
+
+/* services code */
+.services-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.services-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-card {
+    background: var(--card);
+    padding: 2rem;
+    transition: background 0.15s ease;
+    text-decoration: none;
+}
+
+.service-card:hover {
+    background: var(--secondary);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.service-card p {
+    margin-top: 0.5rem;
+    font-size: 0.87rem;
+    line-height: 1.62;
+    color: var(--muted-foreground);
+}
+
+/* ceo story code */
+
+.story { 
+    background: var(--ink); 
+    color: var(--ink-foreground); 
+}
+
+.story-grid {
+  display: grid;
+  gap: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) { 
+    .story-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+}
+
+.story h2 {
+     font-size: 2.25rem; 
+    }
+
+@media (min-width: 768px) { 
+    .story h2 { 
+        font-size: 3rem; 
+    }
+ }
+
+.story-quote {
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.37;
+  opacity: 0.9;
+}
+
+.story-text { 
+    line-height: 1.62; 
+    opacity: 0.8; 
+}
+
+.story-text p { 
+    margin-bottom: 1.25rem; 
+}
+
+.story-text strong { 
+    color: var(--gold); 
+}
+
+/*the court of public opinion */
+
+.reviews-title {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .reviews-title {
+        font-size: 3rem;
+    }
+}
+
+.reviews-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.reviews-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--card);
+    padding: 2rem;
+}
+
+.stars {
+    color: var(--gold);
+    letter-spacing: 0.15em;
+}
+
+.reviews-card blockquote {
+    margin-top: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.37;
+}
+
+.reviews-card figcaption {
+    margin-top: 1.5rem;
+    font-size: 0.87rem;
+    color: var(--muted-foreground);
+}
+
+/* call me beep me */
+
+.contact {
+    border-top: 1px solid var(--border);
+    background: var(--secondary);
+}
+
+.contact-grid {
+    display: grid;
+    gap: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact h2 {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+    .contact h2 {
+        font-size: 3rem;
+    }
+}
+
+.contact .muted {
+    margin-top: 1rem;
+}
+
+.contact-btn {
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.contact-list {
+    list-style: none;
+    align-self: center;
+}
+
+.contact-list li {
+    margin-bottom: 1.25rem;
+}
+
+.contact-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.contact-list span {
+    max-width: 28rem;
+    display: inline-block;
+}
+
+
+.icons:hover {
+    transform: scale(1.2);
+}
+
+/* footer style */
+
+.site-footer {
+    background: var(--ink);
+    color: var(--ink-foreground);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.87rem;
+    opacity: 0.85;
+}
+
+
+
+.icons-footer a {
+    color: inherit;
+    text-decoration: none;
+}

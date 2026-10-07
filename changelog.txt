@@ -1,0 +1,13 @@
+03/10
+- took it back to ground.
+-added header, hero, services, ceo story.
+
+04/10
+- added reviews section
+- added contact section
+- added social buttons 
+- added gift card button
+- added footer
+- added social buttons to footer
+- created NDIS placeholder page
+- hidden nav option on mobile for now, will create hamburger menu for it.
