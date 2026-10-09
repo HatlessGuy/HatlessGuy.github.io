@@ -11,3 +11,20 @@
 - added social buttons to footer
 - created NDIS placeholder page
 - hidden nav option on mobile for now, will create hamburger menu for it.
+
+05/10
+- added header and footer
+- added hero section
+- added stat block
+- added services
+- began approach
+
+09/10
+- added checklist to approach
+- fixed centering on text section of approach
+- added steps section
+- fixed issue arrising with steps list
+- added links for service agreement and referral form
+- added DVA section
+- fixed DVA header links
+- added line in landing on how to find more access on services.
