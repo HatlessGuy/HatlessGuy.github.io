@@ -418,6 +418,8 @@ nav a:hover {
 
 }
 
+
+
 .approach-text h1 {
     font-size: 3.5rem;
 }
@@ -672,6 +674,30 @@ nav a:hover {
 
 .dva-grid h1 {
     font-size: 4.5rem;
+}
+
+@media (max-width: 600px) {
+    .approach-image-wrap {
+         min-height: 0;
+          height: 24rem; 
+        }
+
+    .approach-text { 
+        padding-block: 4.5rem;
+     }
+
+    .start-grid { 
+        gap: 3rem;
+     }
+
+    .form-actions { 
+        grid-template-columns: 1fr; 
+        margin-top: 3rem; 
+    }
+    
+    .dva-section { 
+        padding-block: 4.5rem; 
+    }
 }
 /* footer style */
 
