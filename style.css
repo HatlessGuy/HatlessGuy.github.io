@@ -676,7 +676,7 @@ nav a:hover {
     font-size: 4.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .approach-image-wrap {
          min-height: 0;
           height: 24rem; 
@@ -684,6 +684,10 @@ nav a:hover {
 
     .approach-text { 
         padding-block: 4.5rem;
+     }
+
+     .steps {
+        display: none;
      }
 
     .start-grid { 
