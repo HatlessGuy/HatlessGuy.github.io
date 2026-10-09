@@ -676,32 +676,7 @@ nav a:hover {
     font-size: 4.5rem;
 }
 
-@media (max-width: 768px) {
-    .approach-image-wrap {
-        display: none;
-        }
 
-    .approach-text { 
-        padding-block: 4.5rem;
-     }
-
-     .steps {
-        display: none;
-     }
-
-    .start-grid { 
-        gap: 3rem;
-     }
-
-    .form-actions { 
-        grid-template-columns: 1fr; 
-        margin-top: 3rem; 
-    }
-    
-    .dva-section { 
-        padding-block: 4.5rem; 
-    }
-}
 /* footer style */
 
 .site-footer {
@@ -717,4 +692,23 @@ nav a:hover {
 
 .icons-footer a {
     text-decoration: none;
+}
+/* mobile viewpoints */
+@media (max-width: 900px) {
+
+  .start-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .approach-section { grid-template-columns: 1fr; }
+  .approach-image-wrap { height: 32rem; }
+  .approach-text { padding: 5rem 1.5rem; }
+  .dva-grid { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+
+  .approach-image-wrap { min-height: 0; height: 24rem; }
+  .approach-text { padding-block: 4.5rem; }
+  .start-grid { gap: 3rem; }
+  .form-actions { grid-template-columns: 1fr; margin-top: 3rem; }
+  .dva-grid { padding-block: 4.5rem; }
+  .dva-grid h1 { font-size: 2.5rem; }
 }
