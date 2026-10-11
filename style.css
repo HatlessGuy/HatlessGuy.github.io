@@ -24,6 +24,7 @@
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 html { 
@@ -82,6 +83,7 @@ h1, h2, h3 {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     border-radius: 2px;
     padding: 0.87rem 1.75rem;
@@ -116,6 +118,10 @@ h1, h2, h3 {
 .btn-small {
     padding: 0.62rem 1.25rem;
     font-size: 0.87rem;
+}
+
+.btn-wide {
+    width: 100%;
 }
 
 /* code for header shizz */
@@ -581,7 +587,12 @@ nav a:hover {
     list-style: none;
 }
 
-.steps li { display: grid; grid-template-columns: 3rem 1fr; gap: 1.2rem; padding-block: 1.55rem; border-bottom: 1px solid var(--border); }
+.steps li {
+     display: grid; 
+     grid-template-columns: 3rem 1fr;
+      gap: 1.2rem; padding-block: 1.55rem; 
+      border-bottom: 1px solid var(--border); 
+    }
 
 .steps > li > span {
     width: 2rem; 
@@ -677,6 +688,150 @@ nav a:hover {
 }
 
 
+/*enquiry section */
+.enquiry-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.05fr;
+    gap: 7rem;
+    align-items: start;
+    
+}
+.enquiry-intro h2 {
+   font-size: clamp(2.7rem, 5vw, 4.5rem); 
+}
+    
+
+
+
+.enquiry-intro > p:not(.eyebrow) { 
+    max-width: 34rem; 
+    margin-top: 1.5rem; 
+    color: var(--muted-foreground); 
+}
+
+/* contact form */
+
+.contact-form {
+    display: grid;
+    gap: 1.8rem;
+    padding: 2.75rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+}
+.form-field {
+    border: 0;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.form-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.form-label .required { 
+    color: var(--primary); 
+    font-style: normal; 
+}
+
+.sub-label { 
+    font-size: 0.7rem; 
+    font-weight: 600; 
+    letter-spacing: 0.08em; 
+    text-transform: uppercase; 
+    color: var(--muted-foreground); 
+}
+
+
+.form-row { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+}
+
+.form-input {
+     width: 100%; 
+     padding: 0.85rem 1rem; 
+     border: 1px solid var(--border); 
+     border-radius: 2px; 
+     background: var(--background); 
+     color: var(--foreground); 
+     font-family: var(--font-sans); 
+     font-size: 0.92rem; 
+     transition: border-color 160ms ease; 
+    }
+
+.form-input:focus { 
+    outline: none; 
+    border-color: var(--gold); 
+}
+
+.form-input::placeholder { 
+    color: color-mix(in srgb, var(--muted-foreground) 65%, transparent); 
+}
+
+textarea.form-input { 
+    resize: vertical; 
+    min-height: 8.5rem; 
+}
+
+.service-options { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.75rem; 
+}
+
+.service-option { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    padding: 0.85rem 1rem; 
+    border: 1px solid var(--border); 
+    background: var(--background); 
+    font-size: 0.88rem; 
+    cursor: pointer; 
+    transition: border-color 160ms ease, background-color 160ms ease; 
+}
+
+.service-option:hover {
+    border-color: var(--gold); 
+    }
+
+.service-option:has(input:checked) { 
+    border-color: var(--primary); 
+    background: var(--secondary); 
+}
+
+.service-option input {
+    accent-color: var(--primary);
+    width: 1rem; 
+    height: 1rem; 
+    }
+
+.form-submit {
+    display: grid;
+    gap: 0.8rem; 
+    margin-top: 0.25rem; 
+}
+
+.form-note { 
+    color: var(--muted-foreground); 
+    font-size: 0.75rem; 
+}
+
+.text-link { 
+    color: var(--ink); 
+    font-size: 0.9rem; 
+    font-weight: 700; 
+    text-decoration: none; 
+}
+.text-link span { 
+    margin-left: 0.5rem; 
+    color: var(--gold); 
+}
+
 /* footer style */
 
 .site-footer {
@@ -693,7 +848,7 @@ nav a:hover {
 .icons-footer a {
     text-decoration: none;
 }
-/* mobile viewpoints */
+/* mobile viewpoints  --gonna move the other ones down here and combo them too.. */
 @media (max-width: 900px) {
 
   .start-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -701,6 +856,7 @@ nav a:hover {
   .approach-image-wrap { height: 32rem; }
   .approach-text { padding: 5rem 1.5rem; }
   .dva-grid { align-items: flex-start; flex-direction: column; }
+  .enquiry-grid { grid-template-columns: 1fr; gap: 3rem; }
 }
 
 @media (max-width: 600px) {
@@ -711,4 +867,7 @@ nav a:hover {
   .form-actions { grid-template-columns: 1fr; margin-top: 3rem; }
   .dva-grid { padding-block: 4.5rem; }
   .dva-grid h1 { font-size: 2.5rem; }
+  .contact-form { padding: 1.75rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .service-options { grid-template-columns: 1fr; }
 }

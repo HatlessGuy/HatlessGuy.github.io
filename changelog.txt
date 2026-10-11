@@ -28,3 +28,12 @@
 - added DVA section
 - fixed DVA header links
 - added line in landing on how to find more access on services.
+- mobile viewpoint fixes
+
+11/10
+- added contact us page header
+- added stats
+- added contact form
+- added alt contact
+- added footer
+- fixed nav links
