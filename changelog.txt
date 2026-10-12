@@ -37,3 +37,16 @@
 - added alt contact
 - added footer
 - fixed nav links
+
+12/10
+- created domestic cleaning page
+- began base work (hero, header and stats template)
+- added hero detail (still needs image)
+- added stats details
+- added favicon to all pages
+- added hero image to domestic
+- linked domestic to index
+- added cleaning promise
+- added package section, 
+- added first 2 packages
+- linked to bookings
