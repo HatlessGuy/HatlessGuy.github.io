@@ -948,6 +948,26 @@ textarea.form-input {
     grid-template-columns: repeat(3 minmax(0, 1fr));
 }
 
+/* builders cleans */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.split p {
+    margin-top: 1.3rem;
+    color: var(--muted-foreground);
+}
+
+.photo {
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    display: block;
+}
 /* footer style */
 
 .site-footer {
@@ -976,6 +996,7 @@ textarea.form-input {
   .details-grid { grid-template-columns: 1fr; gap: 2rem; }
   .ser-grid { grid-template-columns: 1fr; }
   .carpet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: 1fr; }
 }
 
 
