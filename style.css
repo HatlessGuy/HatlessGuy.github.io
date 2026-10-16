@@ -956,6 +956,10 @@ textarea.form-input {
     align-items: center;
 }
 
+.split.reverse > :first-child {
+    order: 2;
+}
+
 .split p {
     margin-top: 1.3rem;
     color: var(--muted-foreground);
@@ -967,6 +971,10 @@ textarea.form-input {
     object-fit: cover;
     aspect-ratio: 4 / 3;
     display: block;
+}
+
+.photo.tall {
+    aspect-ratio: 4 /5;
 }
 /* footer style */
 
@@ -997,6 +1005,7 @@ textarea.form-input {
   .ser-grid { grid-template-columns: 1fr; }
   .carpet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .split { grid-template-columns: 1fr; }
+  .split.reverse > :first-child {order: 0;}
 }
 
 
