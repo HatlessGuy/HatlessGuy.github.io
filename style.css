@@ -944,6 +944,10 @@ textarea.form-input {
     margin-top: 2.5rem;
 }
 
+.window-grid {
+    grid-template-columns: repeat(3 minmax(0, 1fr));
+}
+
 /* footer style */
 
 .site-footer {
@@ -971,13 +975,10 @@ textarea.form-input {
   .enquiry-grid { grid-template-columns: 1fr; gap: 3rem; }
   .details-grid { grid-template-columns: 1fr; gap: 2rem; }
   .ser-grid { grid-template-columns: 1fr; }
+  .carpet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 1000px) {
-    .carpet-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
+
 
 @media (max-width: 600px) {
 
@@ -990,5 +991,5 @@ textarea.form-input {
   .contact-form { padding: 1.75rem; }
   .form-row { grid-template-columns: 1fr; }
   .service-options { grid-template-columns: 1fr; }
-  .packages-grid, .addons-grid, .carpet-grid {grid-template-columns: 1fr;}
+  .packages-grid, .addons-grid, .carpet-grid, .window-grid { grid-template-columns: 1fr; }
 }

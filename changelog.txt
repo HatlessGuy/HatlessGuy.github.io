@@ -59,3 +59,8 @@
 14/10
 - added add-on section
 - added carpet cleaning section
+
+16/10
+- reorganising page. changing moveout to other page, making windows here 
+- added window package based on packages document. doesnt reflect bookable though.
+- added current packages
