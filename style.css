@@ -976,6 +976,24 @@ textarea.form-input {
 .photo.tall {
     aspect-ratio: 4 /5;
 }
+
+.detail-list {
+    list-style: none;
+    display: grid;
+    gap: 0;
+}
+
+.detail-list li {
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 1rem;
+
+}
+
+.detail-list li span {
+    color: var(--primary);
+}
 /* footer style */
 
 .site-footer {
