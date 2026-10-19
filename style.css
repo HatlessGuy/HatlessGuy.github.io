@@ -907,6 +907,12 @@ textarea.form-input {
     border-top: 1px solid var(--border); 
 }
 
+.link-top {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
 .inclusions summary { 
     cursor: pointer; 
     padding-block: 1rem; 
