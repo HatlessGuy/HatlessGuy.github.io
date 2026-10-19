@@ -89,3 +89,17 @@
 - added hero image
 - added footer
 - added temp contact from domestic for now
+
+19/10
+Moving page:
+- added booking link for standard package
+- added premium packages
+- began on scope and booking conditions
+- Completed scope and booking
+Domestic:
+- consistancy fixes
+
+NDIS/DVA
+- added DVA service agreement
+- changed links to new NDIS/DVA enquiry form
+- consistency changes

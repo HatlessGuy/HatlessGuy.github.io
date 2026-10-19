@@ -106,6 +106,24 @@ h1, h2, h3 {
     color: var(--primary-foreground);
 }
 
+.btn-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    justify-content: space-between;
+
+
+}
+
+.btn-card:hover {
+    border-color: var(--primary); 
+    transform: translateY(-2px);
+}
+
+.doc-link span {
+    font-family: var(--font-display);
+}
+
+
 .btn-outline {
     border: 1px solid color-mix(in srgb, var(--ink-foreground) 40%, transparent);
     color: var(--ink-foreground);
@@ -618,7 +636,7 @@ nav a:hover {
 
 .form-actions {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-top: 4rem;
 }
@@ -847,6 +865,14 @@ textarea.form-input {
 .detail-p {
     margin-top: 1.25rem;
     margin-bottom: 0.25rem;
+}
+
+.details-smallp {
+    display: block;
+    font-style: italic;
+    font-size: smaller;
+    color: var(--muted-foreground);
+    grid-column: 1 / -1;
 }
 
 .details-section {
